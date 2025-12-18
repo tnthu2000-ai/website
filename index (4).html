@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nguyễn Thanh Thúy - Thạc sĩ Bảo vệ thực vật</title>
+  <meta name="description" content="Hồ sơ chuyên môn và đề tài nghiên cứu của ThS. Nguyễn Thanh Thúy - lĩnh vực Bảo vệ thực vật, nông nghiệp bền vững." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+    }
+    .section-fade {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .section-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .aspect-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+    }
+    .aspect-video > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body class="bg-sky-50 text-slate-800">
+  <div class="min-h-screen flex flex-col">
+    <header class="fixed top-0 inset-x-0 z-50 border-b border-sky-100 bg-sky-50/80 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="#home" class="flex items-center gap-2">
+            <div class="h-9 w-9 rounded-full bg-gradient-to-tr from-sky-400 to-emerald-300 flex items-center justify-center text-white font-semibold text-lg shadow-md">
+              NT
+            </div>
+            <div class="leading-tight">
+              <p class="font-semibold text-slate-900">Nguyễn Thanh Thúy</p>
+              <p class="text-xs text-slate-500">ThS. Bảo vệ thực vật</p>
+            </div>
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="#home" class="nav-link text-slate-600 hover:text-sky-600 transition-colors">Trang chủ</a>
+            <a href="#about" class="nav-link text-slate-600 hover:text-sky-600 transition-colors">Giới thiệu</a>
+            <a href="#research" class="nav-link text-slate-600 hover:text-sky-600 transition-colors">Đề tài nghiên cứu</a>
+            <a href="#videos" class="nav-link text-slate-600 hover:text-sky-600 transition-colors">Video tuyên truyền</a>
+            <a href="#contact" class="nav-link text-slate-600 hover:text-sky-600 transition-colors">Liên hệ</a>
+          </nav>
+          <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-600 hover:bg-sky-100 focus:outline-none focus:ring-2 focus:ring-sky-400">
+            <span class="sr-only">Mở menu</span>
+            <svg id="iconMenu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div id="mobileMenu" class="md:hidden pb-4 space-y-2 hidden">
+          <a href="#home" class="nav-link block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-sky-100">Trang chủ</a>
+          <a href="#about" class="nav-link block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-sky-100">Giới thiệu</a>
+          <a href="#research" class="nav-link block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-sky-100">Đề tài nghiên cứu</a>
+          <a href="#videos" class="nav-link block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-sky-100">Video tuyên truyền</a>
+          <a href="#contact" class="nav-link block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-sky-100">Liên hệ</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 pt-20">
+      <!-- Trang chủ / Hero -->
+      <section id="home" class="relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sky-200/70 blur-3xl"></div>
+          <div class="absolute -left-16 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-emerald-100 blur-3xl"></div>
+        </div>
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 section-fade">
+              <span class="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-700 ring-1 ring-sky-200">
+                Bảo vệ thực vật · Nông nghiệp bền vững
+              </span>
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900">
+                Nguyễn Thanh Thúy
+              </h1>
+              <p class="text-lg sm:text-xl font-medium text-sky-800">
+                Thạc sĩ Bảo vệ thực vật
+              </p>
+              <p class="text-sm sm:text-base text-slate-600 max-w-xl">
+                Tập trung nghiên cứu các mô hình sản xuất nông nghiệp bền vững, quản lý dịch hại tổng hợp và phát triển hệ thống canh tác thân thiện môi trường tại Đồng bằng sông Cửu Long.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a href="#research" class="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-1">
+                  Xem đề tài nghiên cứu
+                </a>
+                <a href="#contact" class="inline-flex items-center justify-center rounded-full border border-sky-300 bg-white/70 px-5 py-2.5 text-sm font-semibold text-sky-700 hover:bg-sky-50 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-1">
+                  Liên hệ công tác
+                </a>
+              </div>
+              <dl class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs sm:text-sm">
+                <div class="glass rounded-xl px-4 py-3 shadow-sm">
+                  <dt class="text-slate-500">Lĩnh vực</dt>
+                  <dd class="font-semibold text-slate-900">Bảo vệ thực vật</dd>
+                </div>
+                <div class="glass rounded-xl px-4 py-3 shadow-sm">
+                  <dt class="text-slate-500">Khu vực</dt>
+                  <dd class="font-semibold text-slate-900">Cần Thơ · Hậu Giang</dd>
+                </div>
+                <div class="glass rounded-xl px-4 py-3 shadow-sm">
+                  <dt class="text-slate-500">Hướng nghiên cứu</dt>
+                  <dd class="font-semibold text-slate-900">Nông nghiệp tuần hoàn</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="section-fade lg:justify-self-end">
+              <div class="relative max-w-sm mx-auto">
+                <div class="absolute inset-0 -rotate-3 rounded-3xl bg-gradient-to-br from-sky-200 via-emerald-100 to-white"></div>
+                <div class="relative rounded-3xl bg-white shadow-xl p-6 space-y-4">
+                  <div class="flex items-center gap-4">
+                    <div class="h-16 w-16 rounded-2xl bg-gradient-to-tr from-sky-400 to-emerald-300 flex items-center justify-center text-white text-3xl font-semibold">
+                      T
+                    </div>
+                    <div>
+                      <p class="text-sm text-slate-500">Nhà nghiên cứu</p>
+                      <p class="text-lg font-semibold text-slate-900">Nguyễn Thanh Thúy</p>
+                      <p class="text-xs text-slate-500">Chi cục Trồng trọt &amp; BVTV TP. Cần Thơ</p>
+                    </div>
+                  </div>
+                  <div class="border-t border-slate-100 pt-4">
+                    <p class="text-xs uppercase tracking-wide text-slate-500 mb-2">Định hướng</p>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                      <li class="flex gap-2">
+                        <span class="mt-1 h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                        Tăng sức khỏe đất và giảm phát thải khí nhà kính.
+                      </li>
+                      <li class="flex gap-2">
+                        <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                        Ứng dụng sinh học trong quản lý dịch hại.
+                      </li>
+                      <li class="flex gap-2">
+                        <span class="mt-1 h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                        Mô hình cây ăn trái năng suất, chất lượng cao.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="flex items-center justify-between text-xs text-slate-500 pt-2">
+                    <span>Hơn 15 năm kinh nghiệm thực tiễn</span>
+                    <span class="inline-flex items-center gap-1 text-sky-600">
+                      <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      Đang công tác
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Giới thiệu -->
+      <section id="about" class="py-16 lg:py-20 bg-white/70">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 section-fade">
+          <div class="flex items-end justify-between gap-4 mb-10">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Giới thiệu</h2>
+              <p class="text-sm sm:text-base text-slate-600 max-w-2xl">
+                Thông tin cá nhân và quá trình đào tạo của ThS. Nguyễn Thanh Thúy trong lĩnh vực Nông học và Bảo vệ thực vật.
+              </p>
+            </div>
+          </div>
+          <div class="grid lg:grid-cols-3 gap-10">
+            <div class="lg:col-span-1">
+              <div class="glass rounded-2xl p-6 shadow-sm border border-sky-50">
+                <h3 class="text-sm font-semibold text-slate-900 mb-4">Thông tin chung</h3>
+                <dl class="space-y-3 text-sm">
+                  <div class="flex justify-between gap-3">
+                    <dt class="text-slate-500">Họ và tên</dt>
+                    <dd class="font-medium text-slate-900 text-right">Nguyễn Thanh Thúy</dd>
+                  </div>
+                  <div class="flex justify-between gap-3">
+                    <dt class="text-slate-500">Ngày sinh</dt>
+                    <dd class="font-medium text-slate-900 text-right">22 tháng 04 năm 1984</dd>
+                  </div>
+                  <div class="flex justify-between gap-3">
+                    <dt class="text-slate-500">Giới tính</dt>
+                    <dd class="font-medium text-slate-900 text-right">Nữ</dd>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <dt class="text-slate-500">Quê quán</dt>
+                    <dd class="font-medium text-slate-900">Xã Đông Hòa, Huyện Châu Thành, Tiền Giang</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="lg:col-span-2">
+              <div class="rounded-2xl bg-gradient-to-r from-sky-50 to-emerald-50 p-6 border border-sky-100">
+                <h3 class="text-sm font-semibold text-slate-900 mb-4">Quá trình đào tạo</h3>
+                <ol class="relative border-l border-sky-200 pl-5 space-y-6 text-sm">
+                  <li>
+                    <div class="absolute -left-[9px] mt-1 h-3 w-3 rounded-full border-2 border-white bg-sky-400 shadow"></div>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-sky-600">2002 – 2007</p>
+                    <p class="mt-1 font-semibold text-slate-900">Kỹ sư Nông học</p>
+                    <p class="text-slate-600">Trường Đại học Cần Thơ</p>
+                  </li>
+                  <li>
+                    <div class="absolute -left-[9px] mt-1 h-3 w-3 rounded-full border-2 border-white bg-emerald-400 shadow"></div>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-emerald-600">2007 – 2010</p>
+                    <p class="mt-1 font-semibold text-slate-900">Thạc sĩ Bảo vệ thực vật</p>
+                    <p class="text-slate-600">Trường Đại học Cần Thơ</p>
+                  </li>
+                </ol>
+                <p class="mt-6 text-xs sm:text-sm text-slate-600">
+                  Nền tảng chuyên môn vững chắc kết hợp kinh nghiệm thực tiễn tại địa phương giúp xây dựng các mô hình sản xuất phù hợp điều kiện sinh thái và tập quán canh tác vùng Đồng bằng sông Cửu Long.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Đề tài nghiên cứu -->
+      <section id="research" class="py-16 lg:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 section-fade">
+          <div class="flex items-end justify-between gap-4 mb-10">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Đề tài nghiên cứu</h2>
+              <p class="text-sm sm:text-base text-slate-600 max-w-2xl">
+                Một số đề tài tiêu biểu gắn với thực tiễn sản xuất nông nghiệp bền vững tại Hậu Giang và Cần Thơ.
+              </p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="group rounded-2xl bg-white shadow-sm border border-sky-100/80 hover:border-sky-300 hover:shadow-md transition-all">
+              <div class="p-5 h-full flex flex-col">
+                <div class="inline-flex items-center rounded-full bg-sky-50 px-3 py-1 text-[11px] font-medium text-sky-700 mb-3">
+                  Quản lý dịch hại
+                </div>
+                <h3 class="text-sm font-semibold text-slate-900 mb-2">
+                  Xây dựng mô hình ứng dụng nấm xanh <em>Metarhizium anisopliae</em> (Ma) trong điều kiện nông hộ để quản lý tổng hợp rầy nâu hại lúa góp phần phát triển nông nghiệp bền vững tại Hậu Giang
+                </h3>
+                <p class="text-xs text-slate-600 mb-3 flex-1">
+                  Tập trung ứng dụng chế phẩm sinh học nấm xanh vào điều kiện sản xuất nông hộ, giảm phụ thuộc thuốc hóa học và bảo vệ hệ sinh thái ruộng lúa.
+                </p>
+                <p class="text-[11px] text-sky-700 font-medium">
+                  Từ khóa: nấm xanh Ma, rầy nâu, quản lý dịch hại tổng hợp, lúa.
+                </p>
+              </div>
+            </article>
+
+            <article class="group rounded-2xl bg-white shadow-sm border border-emerald-100/80 hover:border-emerald-300 hover:shadow-md transition-all">
+              <div class="p-5 h-full flex flex-col">
+                <div class="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-medium text-emerald-700 mb-3">
+                  Cây ăn trái
+                </div>
+                <h3 class="text-sm font-semibold text-slate-900 mb-2">
+                  Xây dựng mô hình trồng cam Sành cho năng suất và chất lượng cao tại tỉnh Hậu Giang
+                </h3>
+                <p class="text-xs text-slate-600 mb-3 flex-1">
+                  Nghiên cứu các yếu tố kỹ thuật canh tác, dinh dưỡng và quản lý dịch hại nhằm tối ưu năng suất và chất lượng cam Sành, gia tăng hiệu quả kinh tế cho nhà vườn.
+                </p>
+                <p class="text-[11px] text-emerald-700 font-medium">
+                  Từ khóa: cam Sành, kỹ thuật canh tác, chất lượng nông sản.
+                </p>
+              </div>
+            </article>
+
+            <article class="group rounded-2xl bg-white shadow-sm border border-sky-100/80 hover:border-sky-300 hover:shadow-md transition-all md:col-span-2 lg:col-span-1">
+              <div class="p-5 h-full flex flex-col">
+                <div class="inline-flex items-center rounded-full bg-sky-50 px-3 py-1 text-[11px] font-medium text-sky-700 mb-3">
+                  Đất &amp; môi trường
+                </div>
+                <h3 class="text-sm font-semibold text-slate-900 mb-2">
+                  Phân lập vi khuẩn lục kỵ khí trong đất giúp giảm phát thải khí trên đất canh tác lúa ở Thành phố Cần Thơ
+                </h3>
+                <p class="text-xs text-slate-600 mb-3 flex-1">
+                  Khai thác hệ vi sinh vật đất nhằm giảm phát thải khí nhà kính trong sản xuất lúa, hướng đến nền nông nghiệp tuần hoàn, thân thiện môi trường.
+                </p>
+                <p class="text-[11px] text-sky-700 font-medium">
+                  Từ khóa: vi khuẩn lục kỵ khí, phát thải khí, đất lúa, Cần Thơ.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video tuyên truyền -->
+      <section id="videos" class="py-16 lg:py-20 bg-white/70">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 section-fade">
+          <div class="flex items-end justify-between gap-4 mb-10">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Video tuyên truyền</h2>
+              <p class="text-sm sm:text-base text-slate-600 max-w-2xl">
+                Một số nội dung truyền thông về nông nghiệp tuần hoàn, hữu cơ và sản xuất bền vững.
+              </p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article class="rounded-2xl bg-white shadow-sm border border-sky-100 overflow-hidden flex flex-col">
+              <div class="aspect-video bg-slate-100">
+                <iframe
+                  src="https://nongnghiepmoitruong.vn/video/phat-trien-nong-nghiep-tuan-hoan-huu-co-de-tang-suc-khoe-dat-tang-loi-nhuan-tv788837.html"
+                  title="Phát triển nông nghiệp tuần hoàn hữu cơ"
+                  class="w-full h-full"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <h3 class="text-sm font-semibold text-slate-900 mb-2">
+                  Phát triển nông nghiệp tuần hoàn hữu cơ để tăng sức khỏe đất, tăng lợi nhuận
+                </h3>
+                <p class="text-xs text-slate-600 mb-3 flex-1">
+                  Giới thiệu các mô hình sản xuất tuần hoàn, tái sử dụng phụ phẩm nông nghiệp nhằm cải thiện độ phì nhiêu đất và nâng cao hiệu quả kinh tế cho nông hộ.
+                </p>
+                <a href="https://nongnghiepmoitruong.vn/video/phat-trien-nong-nghiep-tuan-hoan-huu-co-de-tang-suc-khoe-dat-tang-loi-nhuan-tv788837.html"
+                   target="_blank"
+                   rel="noopener"
+                   class="inline-flex items-center text-xs font-semibold text-sky-700 hover:text-sky-900">
+                  Xem trên NongNghiepMoiTruong.vn
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 4.5H19.5M19.5 4.5V10.5M19.5 4.5L12 12M6 7.5V18H16.5" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="rounded-2xl bg-white shadow-sm border border-sky-100 overflow-hidden flex flex-col">
+              <div class="aspect-video bg-slate-100">
+                <iframe
+                  src="https://www.facebook.com/share/v/17cs9UfJiD/"
+                  title="Video tuyên truyền trên Facebook"
+                  class="w-full h-full"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <h3 class="text-sm font-semibold text-slate-900 mb-2">
+                  Nội dung tuyên truyền về nông nghiệp bền vững (Facebook)
+                </h3>
+                <p class="text-xs text-slate-600 mb-3 flex-1">
+                  Chia sẻ kinh nghiệm, mô hình và thông điệp nâng cao nhận thức cộng đồng về sản xuất nông nghiệp thân thiện môi trường.
+                </p>
+                <a href="https://www.facebook.com/share/v/17cs9UfJiD/"
+                   target="_blank"
+                   rel="noopener"
+                   class="inline-flex items-center text-xs font-semibold text-sky-700 hover:text-sky-900">
+                  Xem trên Facebook
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 4.5H19.5M19.5 4.5V10.5M19.5 4.5L12 12M6 7.5V18H16.5" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="rounded-2xl bg-white shadow-sm border border-emerald-100 overflow-hidden flex flex-col">
+              <div class="aspect-video bg-gradient-to-br from-emerald-50 to-sky-50 flex items-center justify-center">
+                <div class="text-center px-4">
+                  <p class="text-[11px] font-semibold text-emerald-700 uppercase tracking-wide">Bài viết tuyên truyền</p>
+                  <p class="mt-1 text-xs text-slate-500">Nông nghiệp hữu cơ &amp; phát triển bền vững</p>
+                </div>
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <h3 class="text-sm font-semibold text-slate-900 mb-2">
+                  Ba nhóm rào cản lớn của nông nghiệp hữu cơ
+                </h3>
+                <p class="text-xs text-slate-600 mb-3 flex-1">
+                  Bài viết phân tích các nhóm rào cản chính trong phát triển nông nghiệp hữu cơ, từ nhận thức, thị trường đến hệ thống hỗ trợ, qua đó gợi mở giải pháp cho sản xuất bền vững.
+                </p>
+                <a href="https://nongsanviet.nongnghiepmoitruong.vn/ba-nhom-rao-can-lon-cua-nong-nghiep-huu-co-d789393.html"
+                   target="_blank"
+                   rel="noopener"
+                   class="inline-flex items-center text-xs font-semibold text-emerald-700 hover:text-emerald-900">
+                  Đọc trên NongSanViet.NongNghiepMoiTruong.vn
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 4.5H19.5M19.5 4.5V10.5M19.5 4.5L12 12M6 7.5V18H16.5" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Liên hệ -->
+      <section id="contact" class="py-16 lg:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 section-fade">
+          <div class="flex items-end justify-between gap-4 mb-10">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Liên hệ</h2>
+              <p class="text-sm sm:text-base text-slate-600 max-w-2xl">
+                Thông tin công tác và kênh liên hệ để trao đổi chuyên môn, hợp tác nghiên cứu và hoạt động chuyển giao kỹ thuật.
+              </p>
+            </div>
+          </div>
+          <div class="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-10">
+            <div class="rounded-2xl bg-white shadow-sm border border-sky-100 p-6 space-y-4">
+              <h3 class="text-sm font-semibold text-slate-900 mb-2">Thông tin liên hệ</h3>
+              <dl class="space-y-3 text-sm">
+                <div>
+                  <dt class="text-slate-500">Đơn vị công tác</dt>
+                  <dd class="font-medium text-slate-900">Chi cục Trồng trọt và Bảo vệ thực vật Thành phố Cần Thơ</dd>
+                </div>
+                <div>
+                  <dt class="text-slate-500">Địa chỉ</dt>
+                  <dd class="font-medium text-slate-900">Số 322, đường 30 tháng 4, phường Ninh Kiều, Thành phố Cần Thơ</dd>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <div>
+                    <dt class="text-slate-500">Số điện thoại</dt>
+                    <dd class="font-medium text-slate-900">
+                      <a href="tel:0934748094" class="text-sky-700 hover:text-sky-900">0934 748 094</a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="text-slate-500">Email</dt>
+                    <dd class="font-medium text-slate-900 break-all">
+                      <a href="mailto:ntthuy2204@gmail.com" class="text-sky-700 hover:text-sky-900">ntthuy2204@gmail.com</a>
+                    </dd>
+                  </div>
+                </div>
+              </dl>
+              <div class="mt-4 text-xs text-slate-500">
+                Vui lòng để lại nội dung chi tiết khi liên hệ để thuận tiện cho việc sắp xếp trao đổi, làm việc.
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-gradient-to-b from-sky-500 to-emerald-400 p-[1px] shadow-md">
+              <div class="h-full rounded-2xl bg-sky-50/90 p-6 flex flex-col">
+                <h3 class="text-sm font-semibold text-slate-900 mb-2">Gửi lời nhắn nhanh</h3>
+                <p class="text-xs text-slate-600 mb-4">
+                  Biểu mẫu minh họa – thông tin của bạn sẽ được xử lý nội bộ, không gửi đi bất kỳ nơi nào.
+                </p>
+                <form id="contactForm" class="space-y-4 text-sm flex-1 flex flex-col">
+                  <div>
+                    <label for="name" class="block text-xs font-medium text-slate-700 mb-1">Họ và tên</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      class="block w-full rounded-xl border border-sky-200 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
+                      placeholder="Nhập họ và tên của bạn"
+                    />
+                  </div>
+                  <div>
+                    <label for="email" class="block text-xs font-medium text-slate-700 mb-1">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      class="block w-full rounded-xl border border-sky-200 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
+                      placeholder="you@example.com"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <label for="message" class="block text-xs font-medium text-slate-700 mb-1">Nội dung</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      required
+                      class="block w-full rounded-xl border border-sky-200 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400 resize-none"
+                      placeholder="Ghi nội dung trao đổi, đề xuất hợp tác, câu hỏi chuyên môn..."
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="inline-flex w-full items-center justify-center rounded-xl bg-sky-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-1 focus:ring-offset-sky-50"
+                  >
+                    Gửi lời nhắn
+                  </button>
+                </form>
+                <div id="formToast" class="pointer-events-none fixed inset-x-0 bottom-6 mx-auto hidden w-fit max-w-[90%]">
+                  <div class="glass mx-auto flex items-center gap-3 rounded-full border border-emerald-300/60 bg-emerald-50/90 px-4 py-2.5 text-xs shadow-lg">
+                    <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                    <span class="font-medium text-slate-800">
+                      Lời nhắn của bạn đã được ghi nhận (giả lập). Cảm ơn bạn đã liên hệ!
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-sky-100 bg-sky-50/70">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-500">
+        <p>© <span id="year"></span> Nguyễn Thanh Thúy. Thiết kế giao diện cá nhân.</p>
+        <p>Chủ đề màu xanh nhạt · Phong cách hiện đại, tối giản.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const iconMenu = document.getElementById('iconMenu');
+    const iconClose = document.getElementById('iconClose');
+
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+          mobileMenu.classList.add('hidden');
+          iconMenu.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+        } else {
+          mobileMenu.classList.remove('hidden');
+          iconMenu.classList.add('hidden');
+          iconClose.classList.remove('hidden');
+        }
+      });
+    }
+
+    // Smooth scroll for nav links & close mobile when click
+    const navLinks = document.querySelectorAll('a.nav-link[href^="#"]');
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          const headerOffset = 72;
+          const rect = target.getBoundingClientRect();
+          const offsetTop = rect.top + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        }
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          iconMenu.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+        }
+      });
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('main section[id]');
+    const navMap = {};
+    navLinks.forEach((link) => {
+      const id = link.getAttribute('href').slice(1);
+      if (!navMap[id]) navMap[id] = [];
+      navMap[id].push(link);
+    });
+
+    function setActiveNav() {
+      let currentId = null;
+      const scrollPos = window.scrollY + 90;
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        if (scrollPos >= top && scrollPos < top + height) {
+          currentId = section.id;
+        }
+      });
+
+      Object.keys(navMap).forEach((id) => {
+        navMap[id].forEach((link) => {
+          if (id === currentId) {
+            link.classList.add('text-sky-700', 'font-semibold');
+          } else {
+            link.classList.remove('text-sky-700', 'font-semibold');
+          }
+        });
+      });
+    }
+
+    window.addEventListener('scroll', setActiveNav);
+    window.addEventListener('load', setActiveNav);
+
+    // Section fade-in on scroll
+    const fadeSections = document.querySelectorAll('.section-fade');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('section-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      fadeSections.forEach((sec) => observer.observe(sec));
+    } else {
+      fadeSections.forEach((sec) => sec.classList.add('section-visible'));
+    }
+
+    // Contact form fake submit
+    const contactForm = document.getElementById('contactForm');
+    const formToast = document.getElementById('formToast');
+    if (contactForm && formToast) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+        const formData = new FormData(contactForm);
+        console.log('Fake contact form data:', Object.fromEntries(formData.entries()));
+        contactForm.reset();
+        formToast.classList.remove('hidden');
+        setTimeout(() => {
+          formToast.classList.add('hidden');
+        }, 3500);
+      });
+    }
+
+    // Footer year
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>
